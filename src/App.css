@@ -1,0 +1,135 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Table and Schedule Layout */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Fixed layout to ensure equal column widths */
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Add borders if you want */
+}
+
+/* Specific styles for the schedule */
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.schedule-row {
+  display: flex;
+  flex: 1;
+  min-height: 40px; /* Adjust as per your row height */
+}
+
+.lecture-cell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+  align-items: flex-start; /* Left-align text horizontally */
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.lecture-cell[style*="rowSpan"] {
+  vertical-align: top;
+}
+
+/* Dark mode adjustments */
+.dark .lecture-cell {
+  background-color: #333; /* Adjust as per your dark theme */
+  color: #fff;
+}
+
+/* Ensure text color contrasts well with background */
+.lecture-cell {
+  color: #1a1a1a; /* Default dark text for light backgrounds */
+}
+
+.dark .lecture-cell {
+  color: #ffffff; /* White text for dark backgrounds */
+}
+
+/* Styling for lecture content */
+.lecture-cell > div {
+  margin: 0.25em 0; /* Space between lecture details */
+}
+
+.lecture-cell .lecture-name {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.lecture-cell .lecture-details {
+  font-size: 0.875em;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  table,
+  .schedule-container {
+    overflow-x: auto;
+  }
+
+  .schedule-row {
+    flex-direction: column;
+  }
+
+  .lecture-cell {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
