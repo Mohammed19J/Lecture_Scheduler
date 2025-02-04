@@ -3,7 +3,7 @@
 ## **Description**
 The **Lecture Scheduler** is a comprehensive web application designed to help users manage and organize their lecture schedules efficiently. The app ensures no overlapping lectures and optimizes the schedule for ease of access and clarity. It provides features like adding, deleting, and visualizing weekly lectures.
 
-This app was initially developed as a Python desktop application using **Tkinter**. Later, it was ported to **React** using **Bolt.new**, reusing the recursive scheduling algorithm for optimization.
+This app was initially developed as a Python desktop application using **Tkinter**. Later, it was ported to **React**, reusing the recursive scheduling algorithm for optimization.
 
 The React version of the app takes advantage of modern web technologies, offering a sleek, responsive UI and the ability to deploy on the web using **GitHub Pages**.
 
